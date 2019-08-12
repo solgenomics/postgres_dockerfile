@@ -25,16 +25,16 @@ Because this image is an extension of the [postgres Docker image](https://hub.do
 ```
 
 ### Logistics
-####Database
+#### Database
 The database itself is named `breedbase` and contains a number of schemas within it.
 
-####Default username/password:
+#### Default username/password:
 ```
 username: postgres
 password: postgres
 ```
 
-####Connecting Breedbase running in Docker
+#### Connecting Breedbase running in Docker
 If you are using `docker run`, then an easy (although deprecated) way to facilitate inter-container communications is to make use of the `--link` directive.  To do so for Breedbase:
 1. Create a database container (see instructions above)
 1. Update local sgn_local.conf file:
