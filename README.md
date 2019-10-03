@@ -1,18 +1,19 @@
 # postgres_dockerfile
-Dockerfile for breeDBase Postgresql instance.  This image is based on the postgres Docker image (https://hub.docker.com/_/postgres)
+Dockerfile for breeDBase Postgresql instance.  
+
+After the image has completed startup, you will have a base database with all the required schemas and data needed for an instance of Breedbase to connect to it, and run properly.
+
+This image is based on the postgres Docker image (https://hub.docker.com/_/postgres)
 
 ### Install docker (on Debian/Ubuntu)
+For installing on Debian/Ubuntu:
+
 ```bash
 apt-get install docker-ce
 ```
-### Clone the repo
-```bash
-git clone https://github.com/solgenomics/postgres_dockerfile
-```
-### Build the image
-```bash
-docker build -t breedbase_db postgres_dockerfile
-```
+
+For Mac/Windows: [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
 ### Run the container
 To run the image:
 ```bash
@@ -28,40 +29,21 @@ Because this image is an extension of the [postgres Docker image](https://hub.do
 #### Database
 The database itself is named `breedbase` and contains a number of schemas within it.
 
-#### Default username/password:
+#### Default database username/password:
 ```
 username: postgres
 password: postgres
 ```
 
-#### Connecting Breedbase running in Docker
-If you are using `docker run`, then an easy (although deprecated) way to facilitate inter-container communications is to make use of the `--link` directive.  To do so for Breedbase:
-1. Create a database container (see instructions above)
-1. Update local sgn_local.conf file:
-   ```
-   ...
-   dbhost db
-   ...
-   ```
-1. Create a breedbase container<br>*NOTE: add the `--link` parameter to the `docker run` command, ex:
-    ```
-    docker run -d -p 8080:8080 -v /path/to/sgn_local.conf:/home/production/cxgn/sgn/sgn_local.conf --link <name of breedbase db container>:db --name breedbase breedbase/breedbase:latest
-    ``` 
+### Clone the repo
+```bash
+git clone https://github.com/solgenomics/postgres_dockerfile
+```
 
-#### Connecting Breedbase with User Defined Networks
-A better method to facilitate inter-container communication is user-defined networks.
-A full description can be found in the Docker documentation here: [docker user defined networks](https://docs.docker.com/network/)
+### Build the image
+```bash
+docker build -t breedbase/pg:<tag> postgres_dockerfile
+```
 
-First create a network, then add the containers.  The docker postgres container name from above is breedbase_db.
-Assume you have created a breedbase web container named breedbase_web.  At the command line, run the following commands:
-                                                 
-  ```
- docker network create -d bridge bb_bridge_network
- docker network connect bb_bridge_network breedbase_db
- docker network connect bb_bridge_network breedbase_web
-  ```
-  
- From within a container, you can access other containers in the same network by invoking the container name.  For example,
- to access the breedbase postgres database installed in this docker, the breedbase_web container would
- use "breedbase_db" as the "host".
+Replace `<tag>` with an identifier of your choosing
  

@@ -8,7 +8,6 @@ COPY public.cv (cv_id, name, definition) FROM stdin;
 10	plant_ontology	\N
 13	plant_anatomy	\N
 14	plant_growth_and_development_stage	\N
-16	cassava_trait	\N
 18	quality	\N
 19	sequence	\N
 38	project_property	\N

@@ -4349,16 +4349,6 @@ COPY public.cvtermprop (cvtermprop_id, cvterm_id, type_id, value, rank) FROM std
 7594	70644	2	The leaves can be a single leaf, two, or whorls of leaves at each node.	0
 7595	70646	2	In rice the flag leaf sheath is more than 10cm out of the penultimate leaf sheath.	0
 7596	70652	2	A measure of vegetative growth, but leaf production is to be preferred.	0
-7597	70671	2	Symptoms: patches of yellow areas mixed with normal green color on the leaves, Distorts the shape of storage roots, cracks and discoloration in the storage roots.	0
-7598	70696	2	Symptoms: yellowish pinpricks along the main vein of mature leaves, attached leaves turn reddish, brown or rusty in color.	0
-7599	70705	2	Improved leaf retention has been suggested as a possible means to increase cassava productivity under stressed conditions. Cassava cultivars with high leaf retention have been found to produce more total fresh biomass and higher root dry matter than cultivars without the trait.	0
-7600	70707	2	Symptoms: Cankers on the stems and bases of leaf petioles.	0
-7601	70714	2	Symptoms: water soaked angular leaf sports, blighting, wilting, defoliation, vascular necrosis of the stem.	0
-7602	70721	2	Another trait could be added in the future with the categories given in Fuduka (2010).	0
-7603	70758	2	Symptoms: reduction in the length of internodes, distorts the stem, dries up the leaves and defoliates the plants.	0
-7604	70762	2	Symptoms: leaf discoloration with patches of normal green color mixed with light green, yellow, and white areas.	0
-7605	70767	2	Symptoms: tiny yellow chlorotic spots causing severe defoliation, stunted growth and yield reduction, drop shoot tips.	0
-7606	70780	2	Symptoms: growth of black mold on the plant, blackened leaves dry up and drop.	0
 7607	72075	2	This term will be obsoleted; Use GO:growth and PATO:rate.	0
 7608	72076	2	GO has now relevant relation terms which should be used instead.	0
 7609	72078	2	TODO: consider merging with angular placement.	0

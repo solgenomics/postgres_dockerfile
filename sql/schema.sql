@@ -27902,7 +27902,6 @@ ALTER TABLE ONLY tomato_gff.ftype ALTER COLUMN ftypeid SET DEFAULT nextval('toma
 
 -- populate tables
 \i /docker-entrypoint-initdb.d/data/metadata.md_dbversion.sql
-\i /docker-entrypoint-initdb.d/data/metadata.md_files.sql
 \i /docker-entrypoint-initdb.d/data/metadata.md_image.sql
 \i /docker-entrypoint-initdb.d/data/metadata.md_metadata.sql
 \i /docker-entrypoint-initdb.d/data/public.cv.sql
@@ -27915,8 +27914,6 @@ ALTER TABLE ONLY tomato_gff.ftype ALTER COLUMN ftypeid SET DEFAULT nextval('toma
 \i /docker-entrypoint-initdb.d/data/public.cvtermsynonym.sql
 \i /docker-entrypoint-initdb.d/data/public.db.sql
 \i /docker-entrypoint-initdb.d/data/public.dbxref.sql
-\i /docker-entrypoint-initdb.d/data/public.genotype.sql
-\i /docker-entrypoint-initdb.d/data/public.genotypeprop.sql
 \i /docker-entrypoint-initdb.d/data/public.materialized_traits.sql
 \i /docker-entrypoint-initdb.d/data/public.matviews.sql
 \i /docker-entrypoint-initdb.d/data/public.nd_geolocation.sql
@@ -27926,17 +27923,12 @@ ALTER TABLE ONLY tomato_gff.ftype ALTER COLUMN ftypeid SET DEFAULT nextval('toma
 \i /docker-entrypoint-initdb.d/data/public.phylonode_organism.sql
 \i /docker-entrypoint-initdb.d/data/public.phylonode.sql
 \i /docker-entrypoint-initdb.d/data/public.phylotree.sql
+\i /docker-entrypoint-initdb.d/data/public.project.sql
+\i /docker-entrypoint-initdb.d/data/public.projectprop.sql
 \i /docker-entrypoint-initdb.d/data/sgn_people.sp_person_roles.sql
 \i /docker-entrypoint-initdb.d/data/sgn_people.sp_person.sql
 \i /docker-entrypoint-initdb.d/data/sgn_people.sp_roles.sql
-\i /docker-entrypoint-initdb.d/data/sgn.blast_db_blast_db_group.sql
-\i /docker-entrypoint-initdb.d/data/sgn.blast_db_group.sql
-\i /docker-entrypoint-initdb.d/data/sgn.blast_db.sql
-\i /docker-entrypoint-initdb.d/data/sgn.common_name.sql
 \i /docker-entrypoint-initdb.d/data/sgn.experiment_type.sql
-\i /docker-entrypoint-initdb.d/data/sgn.marker_alias.sql
-\i /docker-entrypoint-initdb.d/data/sgn.marker_confidence.sql
-\i /docker-entrypoint-initdb.d/data/sgn.marker.sql
 
 --
 -- restore integrety constraints/sequences/materialized views
