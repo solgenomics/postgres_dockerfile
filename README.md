@@ -17,7 +17,7 @@ For Mac/Windows: [Docker Desktop](https://www.docker.com/products/docker-desktop
 ### Run the container
 To run the image:
 ```bash
-docker run -d --name breedbase_db -p 5432:5432 breedbase_db
+docker run -d --name breedbase_db -p 5432:5432 breedbase/pg:latest
 ```
 
 Because this image is an extension of the [postgres Docker image](https://hub.docker.com/_/postgres), you can pass in the environment variables defined by that image.  You can also mount the data directory to the host for persistent storage: 
