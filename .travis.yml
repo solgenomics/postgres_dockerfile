@@ -3,15 +3,10 @@ env:
   - secure: "Ro/zi18tmNmqjWPEMgEFDEuFw0iqi2KaX6MvIS54v08Ups7AXp0EF605EBZID5GGao3p9/SitIQIFqVZ7OZrfNtJMW3CRyEpOG41uToRuhep6x+Mf2GGuPD4PyTmXWJJUSIfyRKSeCfdiQ88fo0BHu++PtWQqXcHi++OzglREYix05vBzOWuYQOo7692YlrEqBTTSBauZaPVjVxO6dkxDVDyoEyu+n+bPYpdTvJKjng7xeohkxjN0Oa1OU8IMoAEbTbwYJUiTpO7+1Om21u+g/Ps8Jp96AgcvC0yn3GQ00yHpF4Y0MSzu2b9c2wSANWvgX8/u1EqABKqseD6wwul4yciGtZOsLEstNuhOrTUmFwYy0VUiSqku0aQwOjJxdxED9CwDyHdRLQywjFm44XB4UjUEa8WBve0wbR0BWSijgXHv4PPPhXDidwsQOQmZUkpbpKNbmmEYI5TxX2kxAnbZt7I1CLN80+NMNhl9WwKccTprGmYJ7UJIoUiJ8AEsz+pW1bh0gvs3GrnicEVHhbkJ0CLsW/WknrD8152i1pbITLY/acpF2gdofDtnqMoIVycYk62w89L7VwC54evPEpz9q5wPCAUjKabr2UlKf5EeOu35nd5r6n/DNDUOaFn358gOVOZTE9dctqvAtYk5DSCAv86MGAJxBOkofOI8GM5kSQ="
 
 services:
-	- docker
+  - docker
 
 deploy:
     provider: script
-    script:
-      - docker build -t breedbase/pg:$TRAVIS_BUILD_NUMBER .
-      - docker tag breedbase/pg:$TRAVIS_BUILD_NUMBER breedbase/pg:latest
-      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
-      - docker push breedbase/pg:$TRAVIS_BUILD_NUMBER
-      - docker push breedbase/pg:latest
+    script: bash scripts/deploy.sh
     on:
         branch: master
