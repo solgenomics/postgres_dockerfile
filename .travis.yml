@@ -1,12 +1,33 @@
-env:
-  - secure: "lGiGg0NxXFlaxIB7xzHmzKgF9zhbva8Fihm/hyLmWNRgbRcyAoz0Zck5ozGDkWXldLv1sWyyOQ7zmHu1DjtjinuHrNp7sOzOOQrCaamAxt5i/Xdk43Cgyu9R5uW2d5PvXMGYxhGGz2GDyih57ZXasJS0gx7LFXXRtmJkE4Sb1qhlzxCDQUOqiI/iTZ9hPqwxyaHCgbvA016yXI2hosZ3aiUC7w2lx0zNRe2Apn9pazWNp68AlFDQ+h3CGdCF7wGN2UVFs6/KF8062DeKUN79Elo3zrvBTR+n9Sjvjkrul3ikG/V4fkzuL+PEDQzucDJdwQSTDkESUwbAqi6Xqzx4oIvmF62oqfDBAFwbZcqh7WaS+1RYpqK3/cCDF30KBe0oIfQDqy4gKpoeKVgpiXuvSw5VF0ecKiqdK6B8re+kSNJYa/GZietZYNXIxJqyi/dHzVgr66/t9XMr6PaQ9YbTUuOHtUwLdXf3ltmJLr15I342cTeMRpWNXWKyRmg3WuB1FiW1TEo09WQhR0EsQ7w5yraaOUpa10TCq5F+dS5oFwPGDPOoYtIXN7nBF0zZrLORjyFH0bQfC5o2QloHhZbYXCYfjihxZg4jXNk//0KJ4cqcGNgAxocIg3MjI3zvctL6XQrxPjbcvQXzzgaFKsJXUShesjwP4aQz2oAFARDbCVM="
-  - secure: "Ro/zi18tmNmqjWPEMgEFDEuFw0iqi2KaX6MvIS54v08Ups7AXp0EF605EBZID5GGao3p9/SitIQIFqVZ7OZrfNtJMW3CRyEpOG41uToRuhep6x+Mf2GGuPD4PyTmXWJJUSIfyRKSeCfdiQ88fo0BHu++PtWQqXcHi++OzglREYix05vBzOWuYQOo7692YlrEqBTTSBauZaPVjVxO6dkxDVDyoEyu+n+bPYpdTvJKjng7xeohkxjN0Oa1OU8IMoAEbTbwYJUiTpO7+1Om21u+g/Ps8Jp96AgcvC0yn3GQ00yHpF4Y0MSzu2b9c2wSANWvgX8/u1EqABKqseD6wwul4yciGtZOsLEstNuhOrTUmFwYy0VUiSqku0aQwOjJxdxED9CwDyHdRLQywjFm44XB4UjUEa8WBve0wbR0BWSijgXHv4PPPhXDidwsQOQmZUkpbpKNbmmEYI5TxX2kxAnbZt7I1CLN80+NMNhl9WwKccTprGmYJ7UJIoUiJ8AEsz+pW1bh0gvs3GrnicEVHhbkJ0CLsW/WknrD8152i1pbITLY/acpF2gdofDtnqMoIVycYk62w89L7VwC54evPEpz9q5wPCAUjKabr2UlKf5EeOu35nd5r6n/DNDUOaFn358gOVOZTE9dctqvAtYk5DSCAv86MGAJxBOkofOI8GM5kSQ="
-
+sudo: required
 services:
   - docker
 
+env:
+  global:
+    - IMAGE_NAME=breedbase/pg
+    - secure: "ARfw/6JoQsmJdodqU1D9RLro+M998eUkYqvdzUPzZpdcPO44mNsrsjirbsnII7OCNe7bQvQOTHgYyHXEuPgOFQV5JGxvzl3j7UOJ1VE0mcaMKerj8FjqgjhFYv4agp01536e9EpH0t2wIn6m2yn5b0tYyTEHi/PbfmKlHY9GX77HvziRDAKeVR3LncNb69djph7Bl2c9YMLjCZJVRuPY1Zb8EoYAlu9lIyY2gWkJoaPz314+aJ6earH8mg/363mE8cDSBdn9jLanzLMxAiz+wvMLpDwem/VmjpIoe+lH0VgPadtW0tQOg7Gw8CUfWBtuphEi6hK/Or939Qzku41Q/yW8MZPkTea1hJuAQMAxczLh9BhDtmMV/f/RH7w9p9DRY9pw8QPNd3kZqgic631upbPgoG+OHJ4zNmWsIliDS4nMDVorkq38Lm8LiZBkMgVTZ97YIkm557IhIJp/3PASBL/vhtnFi+KLHjMhszz9q6qFeu2X37zbJEP+TFOPsGxZsTIx9BuQgTuFxhaR0aP3vkOdul32ieX6fuNaACxmP5B2K8XILKNErncWEiDN03wCRc2+c0pv+9lxXRQCuqCQeJ6zjf8PbfGGNzYwpSb73E2/C9B//bjxTK4rtiv5Auh5KrlPy9jMvhOJnpkfLqyFW1PNDOJe2g18k8DqIyPgjWU="
+    - secure: "t+JexqOahnVlGBvkwOCwdorIYKi8PWP2qZeWhTkw/Q1p33xDYyFdE8u78LBsDt1C/EFLlPDrtxqs9hYmYkWZGAv5i+2ty7Au2FRrojlLyw/4jlLanWeaE8buUpkjuCfnfflnxuTT4jloM+ONcZ3KcAWINXVAMwgMkFY0+xsWxpRLc0u411f9oAWbUd7YTiPL/zb35apHmmiQDnm2uY3dgLMC8y40hfq3rGItxFxqyw+0pnD9WVSirDAkoDnIBN2fBCoufStAC2j1WgBdGQo14hn8CIJr0NPK0S1oI3B0fHKOCdgvoaUg1z1H9ZvUX43VQZ/hOMmREVM06E4YyGG+Xz3Vsc6ScDfE6LTxzdkwBQo79o8AKfzBsysvJPWlbgKuZn4rw4IUaX5xQeD2y8tgv1zFyG9GHdJUG0MF0qFKay7HewHXUglso02DaAKLkZMGPg7W8XCXYEGWwTIZHeFQi2TpIc42TCXyVIAZGqP/QqJLaHr+LUqCethfUoH+16znse1Cyfzho7iXQ03IQ3oNgyEtoobZbJqz3aO2casr9QcoESD9HcSKHKJmNKhoyD+MZapyQaiirmQISNAyqFz8wmr9645YWtF6xKWmEE3azKs827YrL0SRT/HZntHf8pNd/tOec3TPMiJmImQ5bb0/1lOnILwoKfnCR+4COHyMJUQ="
+
+branches:
+  only:
+    - master
+
+before_script:
+  - docker pull "$IMAGE_NAME" || true
+
+script:
+  - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
+
+after_script:
+  - docker images
+
+before_deploy:
+  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - docker tag "$IMAGE_NAME" "${IMAGE_NAME}:latest"
+  - docker tag "$IMAGE_NAME" "${IMAGE_NAME}:${TRAVIS_BUILD_NUMBER}"
+
 deploy:
-    provider: script
-    script: bash scripts/deploy.sh
-    on:
-        branch: master
+  provider: script
+  script: docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${TRAVIS_BUILD_NUMBER}"
+  on:
+    branch: master
