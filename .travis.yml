@@ -22,7 +22,7 @@ after_script:
   - docker images
 
 before_deploy:
-  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
   - docker tag "$IMAGE_NAME" "${IMAGE_NAME}:latest"
   - docker tag "$IMAGE_NAME" "${IMAGE_NAME}:${TRAVIS_BUILD_NUMBER}"
 
