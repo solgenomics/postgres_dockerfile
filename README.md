@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/solgenomics/postgres_dockerfile.svg?branch=master)](https://travis-ci.com/solgenomics/postgres_dockerfile)
+
 # postgres_dockerfile
 Dockerfile for breeDBase Postgresql instance.  
 
