@@ -31,6 +31,7 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
+
 --
 -- Name: annotation; Type: SCHEMA; Schema: -; Owner: postgres
 --
@@ -250,7 +251,7 @@ ALTER FUNCTION public.boxrange(integer, integer) OWNER TO postgres;
 
 SET default_tablespace = '';
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: feature; Type: TABLE; Schema: public; Owner: postgres
@@ -5435,7 +5436,7 @@ ALTER TABLE gem.ge_template_template_id_seq OWNER TO postgres;
 ALTER SEQUENCE gem.ge_template_template_id_seq OWNED BY gem.ge_template.template_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: blast_defline; Type: TABLE; Schema: genomic; Owner: postgres
@@ -5687,7 +5688,7 @@ ALTER TABLE genomic.clone_feature_clone_feature_id_seq OWNER TO postgres;
 ALTER SEQUENCE genomic.clone_feature_clone_feature_id_seq OWNED BY genomic.clone_feature.clone_feature_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: clone_type; Type: TABLE; Schema: genomic; Owner: postgres
@@ -5960,7 +5961,7 @@ ALTER TABLE genomic.library_shortname_abbreviatio_library_shortname_abbreviatio_
 ALTER SEQUENCE genomic.library_shortname_abbreviatio_library_shortname_abbreviatio_seq OWNED BY genomic.library_shortname_abbreviation.library_shortname_abbreviation_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: qc_report; Type: TABLE; Schema: genomic; Owner: postgres
@@ -6108,7 +6109,7 @@ ALTER TABLE genomic.sequencing_primer_sequencing_primer_id_seq OWNER TO postgres
 ALTER SEQUENCE genomic.sequencing_primer_sequencing_primer_id_seq OWNED BY genomic.sequencing_primer.sequencing_primer_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: ex_tag; Type: TABLE; Schema: insitu; Owner: postgres
@@ -6242,7 +6243,7 @@ ALTER TABLE insitu.experiment_tag_experiment_tag_id_seq OWNER TO postgres;
 ALTER SEQUENCE insitu.experiment_tag_experiment_tag_id_seq OWNED BY insitu.experiment_tag.experiment_tag_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: image_tag; Type: TABLE; Schema: insitu; Owner: postgres
@@ -6991,7 +6992,7 @@ ALTER TABLE metadata.md_tag_tag_id_seq OWNER TO postgres;
 ALTER SEQUENCE metadata.md_tag_tag_id_seq OWNED BY metadata.md_tag.tag_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: roles; Type: TABLE; Schema: metadata; Owner: postgres
@@ -7600,7 +7601,7 @@ CREATE TABLE phenome.cvterm_pub_ranking (
 
 ALTER TABLE phenome.cvterm_pub_ranking OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: dbxref_type; Type: TABLE; Schema: phenome; Owner: postgres
@@ -7722,7 +7723,7 @@ ALTER TABLE phenome.genotype_genotype_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.genotype_genotype_id_seq OWNED BY phenome.genotype.genotype_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: genotype_region; Type: TABLE; Schema: phenome; Owner: postgres
@@ -7945,7 +7946,7 @@ ALTER TABLE phenome.individual_alias_individual_alias_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.individual_alias_individual_alias_id_seq OWNED BY phenome.individual_alias.individual_alias_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: individual_allele; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8112,7 +8113,7 @@ ALTER TABLE phenome.individual_dbxref_individual_dbxref_id_seq OWNER TO postgres
 ALTER SEQUENCE phenome.individual_dbxref_individual_dbxref_id_seq OWNED BY phenome.individual_dbxref.individual_dbxref_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: individual_history; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8215,7 +8216,7 @@ ALTER TABLE phenome.individual_individual_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.individual_individual_id_seq OWNED BY phenome.individual.individual_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: individual_locus; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8292,7 +8293,7 @@ ALTER TABLE phenome.is_public_is_public_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.is_public_is_public_id_seq OWNED BY phenome.is_public.is_public_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: locus; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8365,7 +8366,7 @@ ALTER TABLE phenome.locus2locus_locus2locus_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.locus2locus_locus2locus_id_seq OWNED BY phenome.locus2locus.locus2locus_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: locus_alias; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8533,7 +8534,7 @@ ALTER TABLE phenome.locus_dbxref_locus_dbxref_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.locus_dbxref_locus_dbxref_id_seq OWNED BY phenome.locus_dbxref.locus_dbxref_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: locus_history; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8643,7 +8644,7 @@ ALTER TABLE phenome.locus_locus_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.locus_locus_id_seq OWNED BY phenome.locus.locus_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: locus_marker; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8789,7 +8790,7 @@ ALTER TABLE phenome.locus_registry_locus_registry_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.locus_registry_locus_registry_id_seq OWNED BY phenome.locus_registry.locus_registry_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: locus_unigene; Type: TABLE; Schema: phenome; Owner: postgres
@@ -8979,7 +8980,7 @@ ALTER TABLE phenome.phenotype_user_trait_phenotype_user_trait_id_seq OWNER TO po
 ALTER SEQUENCE phenome.phenotype_user_trait_phenotype_user_trait_id_seq OWNED BY phenome.phenotype_user_trait.phenotype_user_trait_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: polymorphic_fragment; Type: TABLE; Schema: phenome; Owner: postgres
@@ -9299,7 +9300,7 @@ ALTER TABLE phenome.stock_owner_stock_owner_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.stock_owner_stock_owner_id_seq OWNED BY phenome.stock_owner.stock_owner_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: tomato_il_bin; Type: TABLE; Schema: phenome; Owner: postgres
@@ -9520,7 +9521,7 @@ ALTER TABLE phenome.user_trait_user_trait_id_seq OWNER TO postgres;
 ALTER SEQUENCE phenome.user_trait_user_trait_id_seq OWNED BY phenome.user_trait.user_trait_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: variant; Type: TABLE; Schema: phenome; Owner: postgres
@@ -10646,7 +10647,7 @@ CREATE TABLE public.phenotype (
 
 ALTER TABLE public.phenotype OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: project; Type: TABLE; Schema: public; Owner: postgres
@@ -11001,7 +11002,7 @@ CREATE MATERIALIZED VIEW public.accessionsxseedlots AS
 
 ALTER TABLE public.accessionsxseedlots OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: cvterm_relationship; Type: TABLE; Schema: public; Owner: postgres
@@ -12232,7 +12233,7 @@ ALTER TABLE public.cvterm_cvterm_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.cvterm_cvterm_id_seq OWNED BY public.cvterm.cvterm_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: cvterm_dbxref; Type: TABLE; Schema: public; Owner: postgres
@@ -12722,7 +12723,7 @@ ALTER TABLE public.dbxref_dbxref_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.dbxref_dbxref_id_seq OWNED BY public.dbxref.dbxref_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: dbxrefprop; Type: TABLE; Schema: public; Owner: postgres
@@ -12844,7 +12845,7 @@ ALTER TABLE public.environment_environment_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.environment_environment_id_seq OWNED BY public.environment.environment_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: enzyme_restriction_sites; Type: TABLE; Schema: public; Owner: postgres
@@ -13296,7 +13297,7 @@ ALTER TABLE public.feature_pub_feature_pub_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.feature_pub_feature_pub_id_seq OWNED BY public.feature_pub.feature_pub_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: feature_relationship; Type: TABLE; Schema: public; Owner: postgres
@@ -13998,7 +13999,7 @@ ALTER TABLE public.fpc_contig_fpc_contig_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.fpc_contig_fpc_contig_id_seq OWNED BY public.fpc_contig.fpc_contig_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: fpc_fingerprint; Type: TABLE; Schema: public; Owner: postgres
@@ -14489,7 +14490,7 @@ CREATE TABLE public.gff_meta (
 
 ALTER TABLE public.gff_meta OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: glossary; Type: TABLE; Schema: public; Owner: postgres
@@ -14730,7 +14731,7 @@ CREATE MATERIALIZED VIEW public.locationsxyears AS
 
 ALTER TABLE public.locationsxyears OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: marker_names; Type: TABLE; Schema: public; Owner: postgres
@@ -15877,7 +15878,7 @@ ALTER TABLE public.nd_reagentprop_nd_reagentprop_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.nd_reagentprop_nd_reagentprop_id_seq OWNED BY public.nd_reagentprop.nd_reagentprop_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: organism; Type: TABLE; Schema: public; Owner: postgres
@@ -17180,7 +17181,7 @@ ALTER TABLE public.projectprop_projectprop_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.projectprop_projectprop_id_seq OWNED BY public.projectprop.projectprop_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: pub_dbxref; Type: TABLE; Schema: public; Owner: postgres
@@ -17329,7 +17330,7 @@ ALTER TABLE public.pubabstract_pubabstract_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.pubabstract_pubabstract_id_seq OWNED BY public.pubabstract.pubabstract_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: pubauthor; Type: TABLE; Schema: public; Owner: postgres
@@ -18329,7 +18330,7 @@ ALTER TABLE public.synonym_synonym_id_seq OWNER TO postgres;
 ALTER SEQUENCE public.synonym_synonym_id_seq OWNED BY public.synonym.synonym_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: tableinfo; Type: TABLE; Schema: public; Owner: postgres
@@ -18881,7 +18882,7 @@ CREATE TABLE public.unigene_relations (
 
 ALTER TABLE public.unigene_relations OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: unigene_signalp; Type: TABLE; Schema: public; Owner: postgres
@@ -19233,7 +19234,7 @@ ALTER TABLE sgn.blast_db_blast_db_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.blast_db_blast_db_id_seq OWNED BY sgn.blast_db.blast_db_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: blast_db_group; Type: TABLE; Schema: sgn; Owner: postgres
@@ -19305,7 +19306,7 @@ ALTER TABLE sgn.blast_db_organism_blast_db_organism_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.blast_db_organism_blast_db_organism_id_seq OWNED BY sgn.blast_db_organism.blast_db_organism_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: blast_defline; Type: TABLE; Schema: sgn; Owner: postgres
@@ -19535,7 +19536,7 @@ ALTER TABLE sgn.chadoprop_chadoprop_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.chadoprop_chadoprop_id_seq OWNED BY sgn.chadoprop.chadoprop_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: clone; Type: TABLE; Schema: sgn; Owner: postgres
@@ -19691,7 +19692,7 @@ CREATE SEQUENCE sgn.composed_trait_ids
 
 ALTER TABLE sgn.composed_trait_ids OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: cos_markers; Type: TABLE; Schema: sgn; Owner: postgres
@@ -20339,7 +20340,7 @@ ALTER TABLE sgn.est_est_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.est_est_id_seq OWNED BY sgn.est.est_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: ests_mapped_by_clone; Type: TABLE; Schema: sgn; Owner: postgres
@@ -20788,7 +20789,7 @@ ALTER TABLE sgn.fish_result_image_fish_result_image_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.fish_result_image_fish_result_image_id_seq OWNED BY sgn.fish_result_image.fish_result_image_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: go; Type: TABLE; Schema: sgn; Owner: postgres
@@ -20954,7 +20955,7 @@ CREATE TABLE sgn.il_info (
 
 ALTER TABLE sgn.il_info OWNER TO postgres;
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: interpro; Type: TABLE; Schema: sgn; Owner: postgres
@@ -21666,7 +21667,7 @@ ALTER TABLE sgn.metadata_metadata_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.metadata_metadata_id_seq OWNED BY sgn.metadata.metadata_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: microarray; Type: TABLE; Schema: sgn; Owner: postgres
@@ -21858,7 +21859,7 @@ ALTER TABLE sgn.organismgroup_organismgroup_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.organismgroup_organismgroup_id_seq OWNED BY sgn.organismgroup.organismgroup_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: p_markers; Type: TABLE; Schema: sgn; Owner: postgres
@@ -22016,7 +22017,7 @@ ALTER TABLE sgn.pcr_experiment_sequence_pcr_experiment_sequence_id_seq OWNER TO 
 ALTER SEQUENCE sgn.pcr_experiment_sequence_pcr_experiment_sequence_id_seq OWNED BY sgn.pcr_experiment_sequence.pcr_experiment_sequence_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: pcr_product; Type: TABLE; Schema: sgn; Owner: postgres
@@ -22456,7 +22457,7 @@ ALTER TABLE sgn.snpprop_snpprop_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.snpprop_snpprop_id_seq OWNED BY sgn.snpprop.snpprop_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: ssr; Type: TABLE; Schema: sgn; Owner: postgres
@@ -22656,7 +22657,7 @@ ALTER TABLE sgn.taxonomy_tax_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn.taxonomy_tax_id_seq OWNED BY sgn.taxonomy.tax_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: temp_caps_correspondence; Type: TABLE; Schema: sgn; Owner: postgres
@@ -23625,7 +23626,7 @@ ALTER TABLE sgn_people.sp_dataset_sp_dataset_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn_people.sp_dataset_sp_dataset_id_seq OWNED BY sgn_people.sp_dataset.sp_dataset_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: sp_group; Type: TABLE; Schema: sgn_people; Owner: postgres
@@ -24000,7 +24001,7 @@ ALTER TABLE sgn_people.sp_person_sp_person_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn_people.sp_person_sp_person_id_seq OWNED BY sgn_people.sp_person.sp_person_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: sp_project; Type: TABLE; Schema: sgn_people; Owner: postgres
@@ -24272,7 +24273,7 @@ ALTER TABLE sgn_people.user_map_user_map_id_seq OWNER TO postgres;
 ALTER SEQUENCE sgn_people.user_map_user_map_id_seq OWNED BY sgn_people.user_map.user_map_id;
 
 
-SET default_with_oids = true;
+SET default_with_oids = false;
 
 --
 -- Name: facility; Type: TABLE; Schema: sgn_submit; Owner: postgres
